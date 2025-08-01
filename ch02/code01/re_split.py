@@ -13,3 +13,9 @@ print(better_result)
 # Remove whitespace.
 even_better_result = [item for item in better_result if item.strip()]
 print(even_better_result)
+
+# Handle additional special characters.
+text = "Hello, world. Is this-- a test?"
+final_version = re.split(r'([,.:;?_!"()\']|--|\s)', text)
+final_version = [item.strip() for item in final_version if item.strip()]
+print(final_version)
