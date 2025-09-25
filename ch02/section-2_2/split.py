@@ -19,3 +19,8 @@ text = "Hello, world. Is this-- a test?"
 final_version = re.split(r'([,.:;?_!"()\']|--|\s)', text)
 final_version = [item.strip() for item in final_version if item.strip()]
 print(final_version)
+
+# Applying tokenizer to text.
+preprocessed = re.split(r'([,.:;?_!"()\']|--|\s)', raw_text)
+preprocessed = [item.strip() for item in preprocessed if item.strip()]
+print(len(preprocessed))
